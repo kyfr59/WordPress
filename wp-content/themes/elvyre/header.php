@@ -89,7 +89,6 @@
     <body <?php body_class($pi_body_classes); ?>>
 
         <!-- Studens integration -->
-        <link href="/themes/studens/menu/menu.css" media="screen" rel="stylesheet" type="text/css" >
         <style>
         #header-content input {
             height:32px !important;
