@@ -88,13 +88,14 @@
     ?>
     <body <?php body_class($pi_body_classes); ?>>
 
-    <link href="/themes/studens/menu/menu.css" media="screen" rel="stylesheet" type="text/css" >
-    <style>
-    #header-content input {
-        height:32px !important;
-    }
-    </style>
-    <?php require("http://localhost/themes/studens/menu/") ?>
+        <!-- Studens integration -->
+        <link href="/themes/studens/menu/menu.css" media="screen" rel="stylesheet" type="text/css" >
+        <style>
+        #header-content input {
+            height:32px !important;
+        }
+        </style>
+        <?php require(OMEKA_URL."themes/studens/menu/index.php") ?>
 
         <?php if ($pi_theme_options['website_layout'] == 'boxed'): ?>
             <!-- .page-wrapper start -->
@@ -151,145 +152,10 @@
                     </div><!-- .top-bar end -->
                 </section><!-- .top-bar-wrapper end -->
 
-                <!-- header start -->
-                <header id="header" class="clearfix">
-
-                    <!-- logo start -->
-                    <section id="logo">
-                        <a href="<?php echo home_url(); ?>">
-                            <?php
-                            $logo_width = '';
-                            if ($is_retina && !empty($pi_theme_options['retina_logo']['url'])) {
-                                $logo = $pi_theme_options['retina_logo']['url'];
-                                $logo_width = $pi_theme_options['logo']['width'];
-                            } else if (!empty($pi_theme_options['logo']['url'])) {
-                                $logo = $pi_theme_options['logo']['url'];
-                                $logo_width = $pi_theme_options['logo']['width'];
-                            } else {
-                                $logo = TEMPLATEURL . "/img/logo.png";
-                                $logo_width = "138";
-                            }
-                            ?>
-                            <img src='<?php echo $logo ?>' alt='<?php bloginfo('name'); ?>' width="<?php echo $logo_width ?>"/>
-                        </a>
-                    </section><!-- #logo end -->
-
-                    <?php if (isset($pi_theme_options['header_social_icons']) && is_array($pi_theme_options['header_social_icons']) && !empty($pi_theme_options['header_social_icons']['icon'][0]) && $pi_theme_options['header_style'] == '4'): ?>
-                        <!--- .social-links start -->
-                        <ul class="social-links">
-                            <?php
-                            foreach ($pi_theme_options['header_social_icons']['icon'] as $index => $icon) {
-                                ?>
-                                <li>
-                                    <a href="<?php echo $pi_theme_options['header_social_icons']['text'][$index] ?>" class="<?php echo $icon ?>"></a>
-                                </li>
-                            <?php } ?>
-                        </ul><!-- .social-links end -->                        
-
-                        <?php if ($wpml_language_flags == '1'): ?>
-                            <!-- language selector start -->
-                            <div id="wpml-header-language-selector"><?php pi_language_selector_flags(); ?></div ><!-- language selector end -->
-                        <?php endif; ?>
-
-                        <?php if (defined('PI_WOOCOMMERCE') && PI_WOOCOMMERCE && isset($pi_theme_options['woo_header_cart']) && $pi_theme_options['woo_header_cart'] == '1'): ?>
-                            <?php global $woocommerce ?>
-                            <div class="header-cart">
-                                <div class="cart-container icon-cart-3">
-                                    <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'pi_framework'); ?>"> <span class="cart-count"><?php $woocommerce->cart->cart_contents_count ?></span> <?php echo $woocommerce->cart->get_cart_total(); ?></a>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                    <?php endif; ?>
-
-                    <?php if ($pi_theme_options['header_search'] == '1' && ($pi_theme_options['header_style'] == '1' || $pi_theme_options['header_style'] == '2' || $pi_theme_options['header_style'] == '3')): ?>
-                        <section id="search">
-                            <form action="<?php echo esc_url(home_url('/')); ?>" method="get">
-                                <input id="m_search" name="s" type="text" placeholder="<?php _e('Type and hit enter...', 'pi_framework') ?>" onkeydown="if (event.keyCode == 13) {
-                                            this.form.submit();
-                                            return false;
-                                        }"/>
-                                <input class="search-submit" type="submit" />
-                            </form>
-                        </section>
-                    <?php endif; ?>
-
-                    <?php if ($pi_theme_options['header_style'] == '2') { ?>
-                        <?php if ($wpml_language_flags == '1'): ?>
-                            <!-- language selector start -->
-                            <div id="wpml-header-language-selector"><?php pi_language_selector_flags(); ?></div ><!-- language selector end -->
-                        <?php endif; ?>
-
-                        <?php if (defined('PI_WOOCOMMERCE') && PI_WOOCOMMERCE && isset($pi_theme_options['woo_header_cart']) && $pi_theme_options['woo_header_cart'] == '1'): ?>
-                            <?php global $woocommerce ?>
-                            <div class="header-cart">
-                                <div class="cart-container icon-cart-3">
-                                    <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'pi_framework'); ?>"> <span class="cart-count"><?php $woocommerce->cart->cart_contents_count ?></span> <?php echo $woocommerce->cart->get_cart_total(); ?></a>
-                                </div>
-                            </div>
-                        <?php endif; ?>
-                    <?php } ?>
-
-                    <!-- nav container start -->
-                    <section id="nav-container">
-                        <!-- main navigation start  -->
-                        <nav id="nav">
-                            <?php
-                            wp_nav_menu(
-                                    array(
-                                        'theme_location' => 'primary',
-                                        'container' => false,
-                                        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                        'walker' => new Elvyre_Menu_Walker(),
-                                        'fallback_cb' => false
-                                    )
-                            );
-                            ?>
-                        </nav><!-- main navigation end -->
-
-                        <?php if ($pi_theme_options['header_search'] == '1' && ($pi_theme_options['header_style'] == '4' || $pi_theme_options['header_style'] == '5')): ?>
-                            <section id="search">
-                                <!-- search start -->
-                                <form action="<?php echo esc_url(home_url('/')); ?>" method="get">    
-                                    <input class="search-submit" type="submit" />
-                                    <input id="m_search" name="s" type="text" placeholder="<?php _e('Type and hit enter...', 'pi_framework') ?>"  onkeydown="if (event.keyCode == 13) {
-                                            this.form.submit();
-                                            return false;
-                                        }"/>
-                                </form>
-                            </section>
-                        <?php endif; ?>
-
-                        <?php if ($pi_theme_options['header_style'] == '5') { ?>
-                            <?php if ($wpml_language_flags == '1'): ?>
-                                <!-- language selector start -->
-                                <div id="wpml-header-language-selector"><?php pi_language_selector_flags(); ?></div ><!-- language selector end -->
-                            <?php endif; ?>
-                            <?php if (defined('PI_WOOCOMMERCE') && PI_WOOCOMMERCE && isset($pi_theme_options['woo_header_cart']) && $pi_theme_options['woo_header_cart'] == '1'): ?>
-                                <?php global $woocommerce ?>
-                                <div class="header-cart">
-                                    <div class="cart-container icon-cart-3">
-                                        <a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'pi_framework'); ?>"> <span class="cart-count"><?php $woocommerce->cart->cart_contents_count ?></span> <?php echo $woocommerce->cart->get_cart_total(); ?></a>
-                                    </div>
-                                </div>
-                            <?php endif; ?>
-                        <?php } ?>
-                    </section><!-- #nav-container end -->
-
-                    <!-- responsive navigation start -->
-                    <div id="dl-menu" class='dl-menuwrapper'>
-                        <button class="dl-trigger"><?php _e('Open Menu', 'pi_framework') ?></button>
-                        <?php
-                        wp_nav_menu(
-                                array(
-                                    'theme_location' => 'primary',
-                                    'container' => false,
-                                    'items_wrap' => '<ul id="%1$s" class="%2$s dl-menu">%3$s</ul>',
-                                    'walker' => new Elvyre_Responsive_Menu_Walker(),
-                                    'fallback_cb' => false
-                                )
-                        );
-                        ?> <!-- responsive navigation end -->
-                    </div>                    
-
-                </header><!-- #header end -->
+                
             </section><!-- #header-wrapper start end -->
+
+            <div>
+            <link href="wp-content/themes/elvyre/css/slider.css" media="screen" rel="stylesheet" type="text/css" >
+            <?php if ( function_exists( 'show_simpleresponsiveslider' ) ) show_simpleresponsiveslider(); ?>
+            </div>
