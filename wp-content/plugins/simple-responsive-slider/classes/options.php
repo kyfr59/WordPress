@@ -484,7 +484,7 @@ class Simpleresponsiveslider_Options {
 							
 							$html .= '<div class="fields">';							
 							$html .= sprintf( '<label class="full" for="image_link-'.$attachment_id.'">%4$s<input type="text" id="image_link-'.$attachment_id.'" name="%2$s[image_link-'.$attachment_id.']" value="'.$current_link.'"></label>', $id, $tab, $current, __( 'Image link', 'simple-responsive-slider' ) );
-							$html .= sprintf( '<label class="full" for="image_caption-'.$attachment_id.'">%4$s<textarea id="image_caption-'.$attachment_id.'" name="%2$s[image_caption-'.$attachment_id.']" cols="30" rows="10">'.$current_caption.'</textarea></label>', $id, $tab, $current, __( 'Image caption', 'simple-responsive-slider' ) );
+							$html .= sprintf( '<label class="full" for="image_caption-'.$attachment_id.'">%4$s<textarea id="image_caption-'.$attachment_id.'" name="%2$s[image_caption-'.$attachment_id.']" cols="30" rows="10">'.$current_caption.'</textarea></label>', $id, $tab, $current, __( 'Image caption <span style="float:right; color:orangered; font-size:14px;">Utilisez la balise &lt;h1&gt; pour le titre et &lt;br /&gt; pour le retour à la ligne</span>', 'simple-responsive-slider' ) );
 							$html .= sprintf( '<label class="six" for="image_link_target-'.$attachment_id.'">%5$s
 												<input type="checkbox" id="image_link_target-'.$attachment_id.'" name="%2$s[image_link_target-'.$attachment_id.']" value="_blank" %4$s>
 											</label>', $id, $tab, $current, $checked_target, __( 'Open in new window/tab?', 'simple-responsive-slider' ) );

@@ -144,7 +144,7 @@ class Simple_Responsive_Slider {
 						$image_cropped = '<img src="'.$image_cropped[0].'" alt="'.get_the_title($id).'" />';
 					}
 					if($slider['image_caption-'.$id]){
-						$caption = '<p class="caption">'.$slider['image_caption-'.$id].'</p>';
+						$caption = '<p class="caption"><span>'.$slider['image_caption-'.$id].'</span></p>';
 					}
 					if($slider['image_link-'.$id]){
 						if($slider['image_link_target-'.$id]){
@@ -154,7 +154,7 @@ class Simple_Responsive_Slider {
 						$link_close = '</a>';
 					}
 					if(!($slider['image_disabled-'.$id] == '1')){
-						$html .= '<li>'.$link_open.$image_cropped.$caption.$link_close.'</li>';
+						$html .= '<li>'.$link_open.$caption.$image_cropped.$link_close.'</li>';
 					}
 					
 					$caption = null;

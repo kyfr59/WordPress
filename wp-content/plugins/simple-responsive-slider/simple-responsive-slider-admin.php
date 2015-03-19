@@ -211,7 +211,7 @@ $simpleresponsiveslider_options->set_fields(
 			'options' => array(
 				array(
 					'id' => 'image_id',
-					'label' => __( 'Add images and their corresponding link and captions', 'simple-responsive-slider' ),
+					'label' => __( 'Ajouter des images au slider <font color=orangered>Vos images doivent mesurer impérativement 1230 x 450px</font>', 'simple-responsive-slider' ),
 					'type' => 'image_plupload_for_srs',
 				)				
 			)
