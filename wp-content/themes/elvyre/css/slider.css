@@ -38,10 +38,11 @@
 
 
 .rslides_container {
-  margin-bottom: 50px;
+  padding-bottom: 30px;
   position: relative;
   float: left;
   width: 100%;
+  background-color: #EFE5CA;
 }
 
 

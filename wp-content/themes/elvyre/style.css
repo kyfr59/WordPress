@@ -43,6 +43,7 @@ http://wp.tutsplus.com/tutorials/theme-development/child-themes-basics-and-creat
         5.1. Page title 2
         5.2. Page title 3
     6. ELEMENTS
+        6.0. Presentation
         6.1. Accordion
         6.2. Blockquote
         6.3. Buttons
@@ -1153,6 +1154,73 @@ b{
 /* ========================================================================== 
    6. ELEMENTS
 ============================================================================= */
+
+/* 6.0. PRESENTATION
+============================================================================= */
+
+.presentation {
+    float:left;
+    width:100%;
+    padding-top: 30px;
+    background:#FFFDE7;
+    padding-bottom:30px;
+}
+
+.presentation hr {
+    position:absolute;
+    height:40px;
+    width:1230px;
+    background:url('img/slider-bottom.png') center center no-repeat;
+    margin-top:-50px; /* Linked to .presentation padding-top */
+}
+
+.presentation h1 {
+    font-size:20px;
+    font-weight:bold;
+    color:black;
+    text-align:center;
+    margin:0;
+}
+
+.presentation p {
+    width:70%;
+    text-align:center;
+    margin:0 auto;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+.presentation > div {
+    float:left;
+    width:400px;
+    margin-left:140px;
+    padding-top:65px;
+    background:url('img/presentation-left.png') center top no-repeat;
+}
+
+.presentation > div.right {
+    background:url('img/presentation-right.png') center top no-repeat;
+}
+
+.presentation > div h1 {
+    color:#E9A200 !important;
+}
+
+.presentation a,
+.presentation a:hover {
+    display:block;
+    color:white !important;
+    font-size:15px;
+    width:150px;
+    margin: 0 auto;
+    margin-top:-20px;
+    text-align:center;
+    background-color:#E9A200;
+    border-radius:5px;
+    padding:10px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
 
 /* 6.1. ACCORDION
 ============================================================================= */

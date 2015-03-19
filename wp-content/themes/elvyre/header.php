@@ -155,6 +155,22 @@
             </section><!-- #header-wrapper start end -->
 
             <div>
-            <link href="wp-content/themes/elvyre/css/slider.css" media="screen" rel="stylesheet" type="text/css" >
-            <?php if ( function_exists( 'show_simpleresponsiveslider' ) ) show_simpleresponsiveslider(); ?>
+                <link href="wp-content/themes/elvyre/css/slider.css" media="screen" rel="stylesheet" type="text/css" >
+                <?php if ( function_exists( 'show_simpleresponsiveslider' ) ) show_simpleresponsiveslider(); ?>
+            </div>
+            
+            <div class="presentation">
+                <hr />
+                <h1>Donner droit de cité aux mouvements étudiants et à leurs mémoires !</h1>
+                <p>Post hanc adclinis Libano monti Phoenice, regio plena gratiarum et venustatis, urbibus decorata magnis et pulchris; in quibus amoenitate celebritateque nominum Tyros excellit, Sidon et Berytus isdemque pares Emissa et Damascus saeculis condita priscis.</p>
+                <div>
+                    <h1>Ressources numériques</h1>
+                    <p>Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad.</p>
+                    <a href="#">EN SAVOIR PLUS</a>
+                </div>
+                <div class="right">
+                    <h1>Inventaires d'archives</h1>
+                    <p>Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas latasque leges fundamenta libertatis et retinacula sempiterna velut</p>
+                    <a href="#">EN SAVOIR PLUS</a>
+                </div> 
             </div>
