@@ -89,12 +89,9 @@
     <body <?php body_class($pi_body_classes); ?>>
 
         <!-- Studens integration -->
-        <style>
-        #header-content input {
-            height:32px !important;
-        }
-        </style>
         <?php require(OMEKA_URL."themes/studens/menu/index.php") ?>
+        <style>#header-content input {height:32px !important;}</style>
+        
 
         <?php if ($pi_theme_options['website_layout'] == 'boxed'): ?>
             <!-- .page-wrapper start -->
