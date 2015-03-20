@@ -176,6 +176,7 @@ li.blog-post p {
         font-weight:bold;
         font-size:16px;
     }
+    
     </style>
 
         <?php

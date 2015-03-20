@@ -91,7 +91,7 @@
         <!-- Studens integration -->
         <?php require(OMEKA_URL."themes/studens/menu/index.php") ?>
         <style>#header-content input {height:32px !important;}</style>
-        
+
 
         <?php if ($pi_theme_options['website_layout'] == 'boxed'): ?>
             <!-- .page-wrapper start -->
@@ -171,3 +171,4 @@
                     <a href="#">EN SAVOIR PLUS</a>
                 </div> 
             </div>
+            
