@@ -84,7 +84,24 @@ global $wp_query;
 
 ?>
 <!-- .page-content start -->
+
+<style>
+#last-articles {
+    position: relative;
+    height:176px;
+    font-size:20px;
+    color:black;
+    font-weight:bold;
+    text-align:center;
+    padding-top:85px;
+    background:url('wp-content/themes/elvyre/img/last-articles-background.png') center top no-repeat;
+}
+</style>
+
+
 <section class="page-content <?php if ($hide_page_title == '1') echo 'no-page-title'; ?>">
+
+<h1 id="last-articles">Derniers articles</h1>
 
     <!-- .container start -->
     <div class="container">
@@ -93,6 +110,7 @@ global $wp_query;
         <div class="row">
 
             <?php
+            query_posts('showposts=5');
             if (have_posts()) :
                 // check where should sidebar be placed
                 $page_id = get_the_ID();
@@ -109,7 +127,7 @@ global $wp_query;
 
                 $grid_size = ($blog_style == 'blog-post-full' || $blog_style == 'blog-post-masonry-full') ? 12 : 9;
 
-                $ul_classes = array('grid_' . $grid_size, 'blog-posts', 'content-sidebar-' . $page_sidebar, $blog_style);
+                $ul_classes = array('grid_12', 'blog-posts', 'content-sidebar-' . $page_sidebar, $blog_style);
                 if ($blog_style == 'blog-post-masonry-full') {
                     $ul_classes[] = 'isotope';
                     $ul_classes[] = 'full';
@@ -142,9 +160,6 @@ global $wp_query;
                     <?php pi_pagination('blog'); ?>
                 </ul><!-- blog posts container end -->
                 <?php
-                if ($page_sidebar == 'right'):
-                    get_sidebar();
-                endif;
             else :
                 ?>
                 <div class="grid_12">

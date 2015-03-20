@@ -79,6 +79,8 @@ $read_more_text = $pi_theme_options['blog_readmore_text'];
 $single_post_meta = $pi_theme_options['blog_single_meta'];
 ?>
 <!-- .blog-post.format-standard start -->
+
+
 <li id="post-<?php the_ID(); ?>" <?php post_class($list_classes); ?>>
     <?php if ($featured_image): ?>
         <div class="post-media-container">
@@ -106,12 +108,18 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
 
     <?php endif; ?>
 
+
     <!-- .post-body start -->
     <article class="post-body <?php if(is_single() && $single_post_meta == '0') echo "meta-hidden"; ?>">
+    <a href="<?php echo get_permalink(); ?>">
         <?php if ($blog_style == 'blog-post-small-image'): ?>
             <!-- .post-info start -->
             <div class="post-info-container">
 
+            <span class="day"><?php the_time('d') ?></span>
+            <span class="month"><?php mb_strtoupper(the_time('F')); ?></span>
+                    
+    <?php /*
                 <ul class="date-category">
                     <li class="post-date">
                         <span class="day"><?php the_time('d') ?></span>
@@ -126,9 +134,7 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
                 <div class="post-info">
                 <?php endif; ?>
 
-                <a href="<?php echo $post_permalink ?>">
-                    <h3><?php the_title(); ?></h3>
-                </a>
+                
 
                 <ul class="post-meta">
                     <li class="icon-clock">
@@ -149,9 +155,28 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
 
                 <?php if ($blog_style == 'blog-post-small-image'): ?>
                 </div><!-- .post-info end -->
-
+        */ ?>
             </div><!-- .post-info-container end -->
         <?php endif; ?>
+
+    <style type="text/css">
+    li.blog-post {
+        margin-top:-130px;
+        float:left;
+        width:210px !important;
+        padding-left:20px;
+    }
+
+li.blog-post p {
+    font-size:14px;
+}
+
+    span.day, span.month {
+        color:#00555A;
+        font-weight:bold;
+        font-size:16px;
+    }
+    </style>
 
         <?php
         if (is_single()) {
@@ -162,18 +187,21 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
             if ( preg_match('/<!--more(.*?)?-->/', $post->post_content) ) {
                 the_content();                
             }else{
-                the_excerpt();
+                the_excerpt(50);
             }            
         }
 
         ?>
-        <?php if (!is_single() && $read_more == '1'): ?>
+        <?php /*
+            if (!is_single() && $read_more == '1'): ?>
             <a class="read-more" href="<?php echo $post_permalink ?>">
                 <?php echo !empty($read_more_text) ? $read_more_text : __('Read More', 'pi_framework') ?>
                 <span class="icon-arrow-right-3"></span>
             </a>
-        <?php endif; ?>
+        <?php endif; 
+        */ ?>
         <?php if (!is_single()): ?>
+</a>
         </article><!-- .post-body end -->    
     </li><!-- blog post end -->
 <?php endif; ?>
