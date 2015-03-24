@@ -89,9 +89,8 @@
     <body <?php body_class($pi_body_classes); ?>>
 
         <!-- Studens integration -->
-        <?php require(OMEKA_URL."themes/studens/menu/index.php") ?>
+        <?php require(OMEKA_URL."shared/header") ?>
         <style>#header-content input {height:32px !important;}</style>
-
 
         <?php if ($pi_theme_options['website_layout'] == 'boxed'): ?>
             <!-- .page-wrapper start -->
@@ -151,6 +150,8 @@
                 
             </section><!-- #header-wrapper start end -->
 
+            <?php if ($site_description && ( is_home() || is_front_page() )): ?>
+
             <div>
                 <link href="wp-content/themes/elvyre/css/slider.css" media="screen" rel="stylesheet" type="text/css" >
                 <?php if ( function_exists( 'show_simpleresponsiveslider' ) ) show_simpleresponsiveslider(); ?>
@@ -171,4 +172,8 @@
                     <a href="#">EN SAVOIR PLUS</a>
                 </div> 
             </div>
-            
+
+
+
+
+            <?php endif; ?>

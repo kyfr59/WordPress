@@ -85,18 +85,6 @@ global $wp_query;
 ?>
 <!-- .page-content start -->
 
-<style>
-#last-articles {
-    position: relative;
-    height:176px;
-    font-size:20px;
-    color:black;
-    font-weight:bold;
-    text-align:center;
-    padding-top:85px;
-    background:url('wp-content/themes/elvyre/img/last-articles-background.png') center top no-repeat;
-}
-</style>
 
 
 <section class="page-content <?php if ($hide_page_title == '1') echo 'no-page-title'; ?>">
@@ -157,7 +145,7 @@ global $wp_query;
                         get_template_part('content', $format);
                     endwhile;
                     ?>
-                    <?php pi_pagination('blog'); ?>
+                    
                 </ul><!-- blog posts container end -->
                 <?php
             else :
@@ -167,8 +155,53 @@ global $wp_query;
                     <p><?php _e('Sorry, but posts were not found.', 'pi_framework') ?></p>          
                 </div>
             <?php endif; ?>
+
+
         </div><!-- .row end -->
+
+
+   
+    <div id="jumbotron">
+        <a href="#" class="left">
+            <p>
+                <strong>Expositions</strong>
+                Ciliciam vero, quae Cydno amni exultat, Tarsus nobilitat, urbs perspicabilis hanc condidisse Perseus memoratur, Iovis filius et Danaes, vel certe ex Aethiopia profectus Sandan quidam nomine vir opulentus et nobilis et Anazarbus auctoris.
+            </p>
+        </a> 
+        <a href="#" class="right">
+            <p>
+                <strong>Collections</strong>
+                Vbi curarum abiectis ponderibus aliis tamquam nodum et codicem difficillimum Caesarem convellere nisu valido cogitabat, eique deliberanti cum proximis clandestinis conloquiis et nocturnis qua vi, quibusve commentis.
+            </p>
+        </a> 
+    </div>
+
+    
     </div><!-- .container end -->
+
+    <div id="thema">
+        <p>
+            <strong>kézako</strong>
+            <span>Ciliciam vero, quae Cydno amni exultat, Tarsus nobilitat, urbs perspicabilis hanc condidisse Perseus memoratur, Iovis filius et Danaes, vel certe ex Aethiopia profectus Sandan quidam nomine vir opulentus et nobilis et Anazarbus auctori.</span>
+            <a href="#">EN SAVOIR PLUS</a>
+        </p>
+        <p>
+            <strong class="middle">collecter et traiter</strong>
+            <span>Vbi curarum abiectis ponderibus aliis tamquam nodum et codicem difficillimum Caesarem convellere nisu valido cogitabat, eique deliberanti cum proximis clandestinis conloquiis et nocturnis qua vi, quibusve commentis id fieret.</span>
+            <a href="#">EN SAVOIR PLUS</a>
+        </p>
+        <p>
+            <strong class="right">valoriser et soutenir</strong>
+            <span>Et olim licet otiosae sint tribus pacataeque centuriae et nulla mollioribus scriptis per simulationem tractatus publici nimis urgentis eundem  suffragiorum certamina set Pompiliani redierit securitas temporis, per omnes tamen quotquot sunt partes.</span>
+            <a href="#">EN SAVOIR PLUS</a>
+        </p>
+        <br style="clear:both;"/>
+    </div>
+
+    <div id="contact">
+
+    </div>
+
 </section><!-- .page-content end -->
 <?php if (!$detect->isMobile() && is_home()): ?>
     <script>

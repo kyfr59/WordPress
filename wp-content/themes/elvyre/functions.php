@@ -1246,4 +1246,16 @@ if (!function_exists('pi_render_comment')) {
         }
 
     }
+
+    add_filter('widget_text', 'php_text', 99);
+    function php_text($text) {
+    if (strpos($text, '<' . '?') !== false) {
+    ob_start();
+    eval('?' . '>' . $text);
+    $text = ob_get_contents();
+    ob_end_clean();
+    }
+    return $text;
+}
+
     ?>

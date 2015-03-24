@@ -88,5 +88,9 @@ $footer_animation = $pi_theme_options['widgets_animation'];
 
     <div class="clear"></div>
     <?php wp_footer(); ?>
+
+    <!-- Studen's footer integration -->
+    <?php require(OMEKA_URL."shared/header") ?>
+    
 </body>
 </html>

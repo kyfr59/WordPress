@@ -108,13 +108,12 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
 
     <?php endif; ?>
 
-
     <!-- .post-body start -->
     <article class="post-body <?php if(is_single() && $single_post_meta == '0') echo "meta-hidden"; ?>">
     <a href="<?php echo get_permalink(); ?>">
         <?php if ($blog_style == 'blog-post-small-image'): ?>
             <!-- .post-info start -->
-            <div class="post-info-container">
+            <div class="post-info-container" class="grid_12">
 
             <span class="day"><?php the_time('d') ?></span>
             <span class="month"><?php mb_strtoupper(the_time('F')); ?></span>
@@ -158,26 +157,6 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
         */ ?>
             </div><!-- .post-info-container end -->
         <?php endif; ?>
-
-    <style type="text/css">
-    li.blog-post {
-        margin-top:-130px;
-        float:left;
-        width:210px !important;
-        padding-left:20px;
-    }
-
-li.blog-post p {
-    font-size:14px;
-}
-
-    span.day, span.month {
-        color:#00555A;
-        font-weight:bold;
-        font-size:16px;
-    }
-    
-    </style>
 
         <?php
         if (is_single()) {

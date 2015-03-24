@@ -331,6 +331,7 @@ a img.aligncenter {
     padding-left: 10px;
 }
 
+
 /* remove list styling on all lists in content
 * when Content Manager is active */
 .content-manager .page-content .row ul,
@@ -433,6 +434,7 @@ acronym{
     width: 100%;
     margin: 0 auto;
     float: left;
+    background:#FFFDE7;
 }
 
 .page-content.background-black{
@@ -587,7 +589,6 @@ b{
     margin-right: auto;
     margin-left: auto;
     width: 1230px;
-    border: 1px solid #444;
     background: #fff;
 }
 
@@ -1222,6 +1223,104 @@ b{
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
 }
+
+
+/* 6.0.1 JUMBOTRON
+============================================================================= */
+
+#jumbotron {
+    margin:-50px 35px 0 35px;
+}
+
+#jumbotron .left,
+#jumbotron .right {
+    width:550px;
+    height:364px;
+    float:left;
+    background:url('img/jumbotron-left-background.png') center center no-repeat;
+    margin-bottom:30px;    
+}
+
+#jumbotron .right {
+    margin-left:30px;
+    background:url('img/jumbotron-right-background.png') center center no-repeat;
+}
+
+#jumbotron .right p, 
+#jumbotron .left p {
+    margin:30px;
+    width:210px;
+    height:180px;
+    color:white;
+    font-size:14px;
+}
+
+#jumbotron strong {
+    font-size:26px;
+    margin-bottom:10px;
+    display:block;
+}
+
+/* 6.0.2 THEMA
+============================================================================= */
+
+#thema {
+    clear:both;
+    background:#f5efd5 url('img/thema-background.png') right bottom no-repeat;
+    padding: 0 70px;
+}
+
+#thema p {
+    width:263px;
+    padding:50px;
+    float:left;
+    height:350px;
+    text-align: center;
+}
+
+#thema strong {
+    display: block;
+    height:20px;
+    background:url('img/thema-left.png') center top no-repeat;
+    text-align:center;
+    padding-top:80px;
+    font-size:20px;
+}
+
+#thema span {
+    display:block;
+    height:160px;
+}
+
+#thema strong.middle {
+    background:url('img/thema-center.png') center top no-repeat;
+}
+
+#thema strong.right {
+    background:url('img/thema-right.png') center top no-repeat;
+}
+
+#thema a,
+#thema a:hover {
+    display:block;
+    color:white !important;
+    font-size:15px;
+    width:150px;
+    margin: 0 auto;
+    text-align:center;
+    background-color:#70706F;
+    border-radius:5px;
+    padding:10px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+
+
+/* 6.0.3 CONTACT
+============================================================================= */
+
+
+
 
 /* 6.1. ACCORDION
 ============================================================================= */
@@ -3621,7 +3720,6 @@ li.pricing-footer{
 ============================================================================= */
 .blog-posts li.blog-post{
     float: left;
-    margin-bottom: 80px;
     width: 100%;
     position: relative;
 }
@@ -4296,6 +4394,23 @@ li.pricing-footer{
 /*    SHARE BLOG POSTS AND PORTFOLIO POSTS
 ============================================================================= */
 
+li.blog-post {
+    margin-top:-130px;
+    float:left;
+    width:210px !important;
+    padding-left:20px;
+}
+
+li.blog-post p {
+    font-size:14px;
+}
+
+span.day, span.month {
+    color:#00555A;
+    font-weight:bold;
+    font-size:16px;
+}
+    
 .blog-post .share-post{
     margin-bottom: 80px;
 }
@@ -4674,13 +4789,23 @@ ul.pi_recent_posts > li{
 }
 
 
+#last-articles {
+    position: relative;
+    height:176px;
+    font-size:20px;
+    color:black;
+    font-weight:bold;
+    text-align:center;
+    padding-top:85px;
+    background:url('img/last-articles-background.png') center top no-repeat;
+}
 
 
 
 /* WIDEGT RECENT COMMENTS
 ============================================================================= */
 .widget_recent_comments li{
-    background: url('img/icon-comment.png') no-repeat 0 center;
+    background:url('img/icon-comment.png') no-repeat 0 center;
     padding-left: 60px;
     padding-top: 0;
     min-height: 40px;
