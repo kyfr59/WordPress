@@ -63,13 +63,15 @@ if (!empty($image_url)) {
         $featured_image = bfi_thumb($image_url, $params); //resize & crop the image 
     }
 
-    $post_image = "<img src='{$featured_image}' alt='{$post_title}' />";
+    $post_image = "<img style='border:1px solid #666; margin-bottom:10px;' src='{$featured_image}' alt='{$post_title}' />";
 } else {
     $list_classes[] = 'no-post-image';
 }
 
 if ($blog_style == 'blog-post-masonry-full' || $blog_style == 'blog-post-masonry')
     $list_classes[] = 'isotope-item';
+
+$list_classes[] = 'no-post-image';
 
 // read more button
 $read_more = $pi_theme_options['blog_hide_readmore'];
@@ -82,18 +84,7 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
 
 
 <li id="post-<?php the_ID(); ?>" <?php post_class($list_classes); ?>>
-    <?php if ($featured_image): ?>
-        <div class="post-media-container">
-            <a href="<?php echo $post_permalink ?>">
-                <?php echo $post_image; ?>
-            </a>
-
-            <div class="post-media-hover">
-                <a href="<?php echo $post_permalink ?>" class="mask"></a>
-            </div>
-        </div><!-- .post-media-container -->
-    <?php endif; ?>
-
+    
     <?php if (!is_single() && $blog_style != 'blog-post-small-image' || (is_single() && $single_post_meta == '1')): ?>
         <ul class="post-info">
             <li class="post-date">
@@ -111,6 +102,9 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
     <!-- .post-body start -->
     <article class="post-body <?php if(is_single() && $single_post_meta == '0') echo "meta-hidden"; ?>">
     <a href="<?php echo get_permalink(); ?>">
+    <?php if ($featured_image): ?>
+        <?php echo $post_image; ?>
+    <?php endif; ?>
         <?php if ($blog_style == 'blog-post-small-image'): ?>
             <!-- .post-info start -->
             <div class="post-info-container" class="grid_12">
