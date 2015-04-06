@@ -437,6 +437,11 @@ acronym{
     background:#FFFDE7;
 }
 
+.page-content .container {
+    border:0px solid;
+    margin-top:-140px;
+}
+
 .page-content.background-black{
     background-color: #333;
 }
@@ -1163,8 +1168,8 @@ b{
     float:left;
     width:100%;
     padding-top: 30px;
-    background:#FFFDE7;
     padding-bottom:-40px;
+    background:#FFFDE7 url('img/body-background.png') top left no-repeat;
 }
 
 
@@ -3718,6 +3723,7 @@ li.pricing-footer{
 /* ==========================================================================
     7.3. BLOG
 ============================================================================= */
+
 .blog-posts li.blog-post{
     float: left;
     width: 100%;
@@ -4395,7 +4401,6 @@ li.pricing-footer{
 ============================================================================= */
 
 li.blog-post {
-    margin-top:-130px;
     float:left;
     width:210px !important;
     padding-left:20px;
@@ -4799,8 +4804,6 @@ ul.pi_recent_posts > li{
     padding-top:85px;
     background:url('img/last-articles-background.png') center top no-repeat;
 }
-
-
 
 /* WIDEGT RECENT COMMENTS
 ============================================================================= */
