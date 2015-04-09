@@ -109,8 +109,8 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
             <!-- .post-info start -->
             <div class="post-info-container" class="grid_12">
 
-            <span class="day"><?php the_time('d') ?></span>
-            <span class="month"><?php mb_strtoupper(the_time('F')); ?></span>
+            <span class="day"><?php echo $post_title; ?></span>
+            <!--<span class="month"><?php mb_strtoupper(the_time('F')); ?></span>-->
                     
     <?php /*
                 <ul class="date-category">
