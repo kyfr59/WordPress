@@ -145,11 +145,11 @@ div.wpcf7 .placeheld {
 	background: white url(../../../../themes/elvyre/img/name-background.png) 10px 15px no-repeat;
 }
 
-.wpcf7-form .right input[name=email] {
+.wpcf7-form .right input[name=your-email] {
 	background: white url(../../../../themes/elvyre/img/email-background.png) 10px 15px no-repeat;	
 }
 
-.wpcf7-form .right input[name=subject],
+.wpcf7-form .right input[name=your-subject],
 .wpcf7-form .right textarea {
 	background: white url(../../../../themes/elvyre/img/subject-background.png) 10px 15px no-repeat;	
 }
