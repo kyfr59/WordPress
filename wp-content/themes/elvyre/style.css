@@ -5243,3 +5243,15 @@ h2.article-title{
     text-decoration:underline;
     font-size:14px;
 }
+
+.page .page-content .row {
+    margin-top: 180px !important;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.wpcf7-mail-sent-ok,
+.wpcf7-response-output,
+.wpcf7-validation-errors {
+    margin-top:60px !important;
+}
