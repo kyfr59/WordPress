@@ -83,6 +83,17 @@ http://wp.tutsplus.com/tutorials/theme-development/child-themes-basics-and-creat
     1. CSS RESET
 ============================================================================= */
 
+@font-face {
+    font-family: 'CalibriRegular';
+    src: url('./fonts/calibri-webfont.eot');
+    src: url('./fonts/calibri-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/calibri-webfont.woff') format('woff'),
+         url('./fonts/calibri-webfont.ttf') format('truetype'),
+         url('./fonts/calibri-webfont.svg#CalibriRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption,center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video, xmp { border: 0; margin: 0; padding: 0; font-weight: normal;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
 b, strong {font-weight: bold;}
@@ -594,7 +605,7 @@ b{
     margin-right: auto;
     margin-left: auto;
     width: 1230px;
-    background: #fff;
+    background-color: #FFFDE7;
 }
 
 /* 4.1. GLOBAL STYLING 
@@ -1050,11 +1061,11 @@ b{
 ============================================================================= */
 #page-title{
     background-size: contain;
-    padding: 100px 0 0;
-    margin-bottom: 70px;
+    /*padding: 100px 0 0;*/
     overflow: hidden;
     position: relative;
     background-attachment: fixed;
+    padding:15px;
 }
 
 #page-title.no-image .pt-title{
@@ -1065,10 +1076,10 @@ b{
     padding: 20px 0;
 }
 
-.pt-title h1{
+h1.pt-title{
     font-size: 36px;
     line-height: 38px;
-    display: inline-block;
+    display:block;
 }
 
 .pt-image-container{
@@ -3726,7 +3737,6 @@ li.pricing-footer{
 
 .blog-posts li.blog-post{
     float: left;
-    width: 100%;
     position: relative;
 }
 
@@ -5171,4 +5181,65 @@ footer a{
 
 .nicescroll-rails {
     z-index: 10000 !important;
+}
+
+/* Studen's overload */
+
+
+
+.single .container {
+    border:0px solid;
+    margin-top:30px;
+    margin-right:70px;
+    width:1120px !important;
+}
+
+h1.article-title {
+    font-family: CalibriRegular, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    font-size: 36px;
+    line-height: 38px;
+    min-height:100px;
+    padding-left:121px;
+    padding-top:7px;
+    background: url('img/title-background.png') 31px top no-repeat;
+    display:block;
+    font-size:20px !important;
+    font-weight:bold;
+    color:black;
+    margin-top:0px;
+    margin-top:-5px;
+}
+
+h2.article-title{
+    font-family: CalibriRegular, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    display: block;
+    margin: 0;
+    margin-top: 7px;
+    padding: 0;
+    font-size:20px;
+    font-weight:bold;
+    line-height: 15px;
+    color: #F8A301;
+    background: url('img/subtitle-background.png') 124px center no-repeat;
+    margin-top:-91px;
+    padding-left:153px;
+}
+
+
+.single li.blog-post{
+    width:100% !important;
+}
+
+.single .post-body {
+    padding-left: 0px;
+}
+
+.single li.blog-post p {
+    width:1120px !important;
+}
+
+.single .post-body p a {
+    color:#F8A301;
+    text-decoration:underline;
+    font-size:14px;
 }

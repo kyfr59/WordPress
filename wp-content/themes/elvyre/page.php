@@ -51,7 +51,7 @@ if (have_posts()) : the_post();
                         <?php
                         the_content();
                         if ($disable_page_comments != '1')
-                            comments_template('', true);
+                          // comments_template('', true);
                         ?>
                     </article>
                     <?php if ($page_style == 'right') get_sidebar(); ?>
@@ -75,7 +75,7 @@ if (have_posts()) : the_post();
                         <div class = "row">
                             <article class = "grid_12">
                                 <?php
-                                comments_template('', true);
+                                //comments_template('', true);
                                 ?>
                             </article>
                         </div><!-- .row end -->
@@ -94,8 +94,8 @@ if (have_posts()) : the_post();
                         <article class="grid_12">
                             <?php
                             the_content();
-                            if ($disable_page_comments != '1')
-                                comments_template('', true);
+                            //if ($disable_page_comments != '1')
+                            //    comments_template('', true);
                             ?>
                         </article>
                     </div><!-- .row end -->

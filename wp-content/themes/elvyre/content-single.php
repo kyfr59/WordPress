@@ -28,7 +28,6 @@ if (!$format) {
 
 get_template_part('content', $format);
 ?>
-<div class="margin-80 clearfix"></div>
 <?php
 
 if ($pi_theme_options['blog_single_show_author'] == '1'):
@@ -40,6 +39,7 @@ if ($pi_theme_options['blog_single_show_author'] == '1'):
     $post_author_website = get_the_author_meta('user_url');
     ?>
     <!-- .post-author start -->
+    <!--
     <article class="post-author">
         <h4><?php echo $about_the_author ?></h4>
         
@@ -56,10 +56,12 @@ if ($pi_theme_options['blog_single_show_author'] == '1'):
             
             <p><?php echo $post_author_bio ?></p>            
         </section>
-    </article><!-- post-author end -->
+        
+    </article>
+    -->
     <?php
 endif;
-comments_template('', true);
+//comments_template('', true);
 ?>
 </article><!-- .post-body end -->    
 </li><!-- blog post end -->

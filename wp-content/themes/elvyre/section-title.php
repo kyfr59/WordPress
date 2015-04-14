@@ -86,13 +86,7 @@ if (!empty($page_title_first_image) && !empty($page_title_first_image['url'])) {
     }
 
 
-    $page_title_style = "style='background-image: url(" . $image . ")'";
-} else if (!empty($page_title_color)) {
-    $page_title_style = "style='background: " . $page_title_color . "'";
-} else {
-    $page_title_style = '';
-}
-
+} 
 // additional image on the right side of page title
 $additional_image_animation = $pi_theme_options['animated_image_animation'];
 
@@ -116,53 +110,46 @@ if (!empty($parallax) && $parallax_page == '1') {
     $parallax_active = 'no-parallax';
 }
 
+$months[1] = 'Janvier';
+$months[2] = 'Février';
+$months[3] = 'Mars';
+$months[4] = 'Avril';
+$months[5] = 'Mai';
+$months[6] = 'Juin';
+$months[7] = 'Juillet';
+$months[8] = 'Août';
+$months[9] = 'Septembre';
+$months[10] = 'Octobre';
+$months[11] = 'Novembre';
+$months[12] = 'Décembre';
+
 ?>
 <!-- .page-title-container start -->
-<section id="page-title" class="page-title-<?php echo $style ?> <?php echo $parallax_active ?>" <?php echo $data_stellar_background_ratio ?> <?php echo $page_title_style ?>>
-    <div class="container">
-        <div class="row">
-            <div class="grid_<?php echo $style == '1' ? '8' : '12' ?>">
-                <?php if ($style == '1' || $style == '2'): ?>
-                    <div class="pt-title <?php if ($page_title_animation != "disabled") echo "triggerAnimation animated"; ?>" <?php if ($page_title_animation != "disabled"): ?> data-animate="<?php echo $page_title_animation ?>" <?php endif; ?>>
-                        <h1><?php echo $page_title ?></h1>
-                    </div>
-                <?php endif; ?>
-                <?php if (($style == '2' || $style == '3') && !empty($show_breadrumbs)): ?>
-                    <?php
-                    if (PI_WOOCOMMERCE && is_woocommerce()) {
-                        do_action('pi_woocommerce_breadcrumb');
-                    } else {
-                        pi_breadcrumbs();
-                    }
-                    ?>
-                <?php endif; ?>
-            </div>
+<section id="page-title" class="page-title-<?php echo $style ?> <?php echo $parallax_active ?>" <?php echo $data_stellar_background_ratio ?>>
+    <h1 class="article-title"><?php echo $page_title ?></h1>
+    <h2 class="article-title"><?php the_time('d') ?> <?php echo $months[(int)get_the_time('m')]; ?> <?php the_time('Y') ?></h2>
 
-            <?php if ($style == '1' && !empty($additional_image['url'])): ?>
-                <!-- .grid_4 start -->
-                <div class="grid_4">
-                    <div class="pt-image-container">
-                        <div class="pt-image <?php if ($additional_image_animation != "disabled") echo "triggerAnimation animated"; ?>" <?php if ($additional_image_animation != "disabled"): ?> data-animate="<?php echo $additional_image_animation ?>" <?php endif; ?>>
-                            <img class="float-right" src="<?php echo $additional_image['url'] ?>" alt="about us page title image" />
-                        </div>
-                    </div>
-                </div><!-- .grid_4 end -->
-            <?php endif; ?>
-        </div><!-- .row end -->
-        <?php if ($style == '1' && !empty($show_breadrumbs)): ?>
-            <div class="row">
-                <div class="grid_8 <?php if ($breadrumbs_animation != "disabled") echo "triggerAnimation animated"; ?>" <?php if ($breadrumbs_animation != "disabled"): ?> data-animate="<?php echo $breadrumbs_animation ?>" <?php endif; ?>>
-                    <?php 
-                    if (PI_WOOCOMMERCE && is_woocommerce()) {
-                        do_action('pi_woocommerce_breadcrumb');
-                    } else {
-                        pi_breadcrumbs();
-                    }
-                    ?>
+    <?php if (($style == '2' || $style == '3') && !empty($show_breadrumbs)): ?>
+        <?php
+        if (PI_WOOCOMMERCE && is_woocommerce()) {
+            do_action('pi_woocommerce_breadcrumb');
+        } else {
+            pi_breadcrumbs();
+        }
+        ?>
+    <?php endif; ?>
+
+    <?php if ($style == '1' && !empty($additional_image['url'])): ?>
+        <!-- .grid_4 start -->
+        <div class="grid_12">
+            <div class="pt-image-container">
+                <div class="pt-image <?php if ($additional_image_animation != "disabled") echo "triggerAnimation animated"; ?>" <?php if ($additional_image_animation != "disabled"): ?> data-animate="<?php echo $additional_image_animation ?>" <?php endif; ?>>
+                    <img class="float-right" src="<?php echo $additional_image['url'] ?>" alt="about us page title image" />
                 </div>
             </div>
-        <?php endif; ?>
-    </div><!-- .container end -->
+        </div><!-- .grid_4 end -->
+    <?php endif; ?>
+
 </section><!-- #page-title end -->
 
 

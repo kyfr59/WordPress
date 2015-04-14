@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The default template for displaying content
  */
@@ -82,10 +83,12 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
 ?>
 <!-- .blog-post.format-standard start -->
 
-
 <li id="post-<?php the_ID(); ?>" <?php post_class($list_classes); ?>>
     
+    
+
     <?php if (!is_single() && $blog_style != 'blog-post-small-image' || (is_single() && $single_post_meta == '1')): ?>
+        <!--
         <ul class="post-info">
             <li class="post-date">
                 <span class="day"><?php the_time('d') ?></span>
@@ -96,12 +99,13 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
                 <i class="icon-image-2"></i>
             </li>
         </ul>
-
+        -->
     <?php endif; ?>
-
     <!-- .post-body start -->
     <article class="post-body <?php if(is_single() && $single_post_meta == '0') echo "meta-hidden"; ?>">
+    <?php if(!is_single()): ?>
     <a href="<?php echo get_permalink(); ?>">
+    <?php endif; ?>
     <?php if ($featured_image): ?>
         <?php echo $post_image; ?>
     <?php endif; ?>

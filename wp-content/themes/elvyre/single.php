@@ -23,7 +23,7 @@ if ($hide_page_title == '0') {
 $ul_classes = array('blog-posts');
 
 if($blog_style == 'blog-post-large-image'){
-    $ul_classes[] = 'grid_9';
+    $ul_classes[] = 'grid_12';
 }else{
     $ul_classes[] = 'grid_12';
 }
@@ -54,7 +54,7 @@ if ($animation != "disabled") {
                 endwhile;
                 ?>
             </ul><!-- blog posts container end -->
-            <?php if ($blog_style == 'blog-post-large-image') get_sidebar(); ?>
+            <?php // if ($blog_style == 'blog-post-large-image') get_sidebar(); ?>
         </div><!-- .row end -->
     </div><!-- .container end -->
 </section><!-- .page-content end -->
