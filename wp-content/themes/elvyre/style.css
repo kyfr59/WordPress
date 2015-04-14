@@ -5249,9 +5249,3 @@ h2.article-title{
     position: relative;
     margin-bottom: 40px;
 }
-
-.wpcf7-mail-sent-ok,
-.wpcf7-response-output,
-.wpcf7-validation-errors {
-    margin-top:60px !important;
-}

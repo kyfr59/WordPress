@@ -76,3 +76,99 @@ div.wpcf7 div.ajax-error {
 div.wpcf7 .placeheld {
 	color: #888;
 }
+
+
+
+/* Studens thèmes */
+.wpcf7-form {
+    font-family: CalibriRegular, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+
+.wpcf7-mail-sent-ok,
+.wpcf7-response-output,
+.wpcf7-validation-errors {
+    margin-top:60px !important;
+    border:none !important;
+    margin-left:550px !important;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.wpcf7-validation-errors {
+    color:red;
+}
+
+.wpcf7-form .left, 
+.wpcf7-form .right {
+    width:550px;
+    float:left;
+}
+
+.wpcf7-form .right {
+    width:600px;
+    margin-left:10px;
+}
+
+.wpcf7-form .left p {
+	margin-bottom:15px;
+	margin-right:15px;
+	color:black !important;    
+	font-size:15px;
+}
+
+.wpcf7-form .left strong {
+    display:block;
+	color:black !important;    
+}
+
+.wpcf7-form .left a {
+	font-size:15px;
+    display:block;
+    color:#e6a227;
+    background:url(../../../../themes/elvyre/img/email-background.png) left 8px no-repeat;
+    padding-left:17px;
+}
+
+.wpcf7-form .left a:hover {
+	color:#e6a227 !important;
+	text-decoration:underline;
+}
+
+.wpcf7-form .right input,
+.wpcf7-form .right textarea {
+	font-family: CalibriRegular, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-size:17px;
+	border:1px solid #ccc;
+	margin-bottom:15px;
+	padding:12px;
+	padding-left:30px;
+	background: white url(../../../../themes/elvyre/img/name-background.png) 10px 15px no-repeat;
+}
+
+.wpcf7-form .right input[name=email] {
+	background: white url(../../../../themes/elvyre/img/email-background.png) 10px 15px no-repeat;	
+}
+
+.wpcf7-form .right input[name=subject],
+.wpcf7-form .right textarea {
+	background: white url(../../../../themes/elvyre/img/subject-background.png) 10px 15px no-repeat;	
+}
+
+.wpcf7-form .right input[type=submit] {
+	color:white;
+	background-color:#e3a126;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background-image: none;
+	border:none;
+	text-align:center;
+	padding:20px 60px;
+	float:left;
+} 
+
+
+.wpcf7-not-valid-tip {
+	margin-top:-15px;
+	margin-bottom:18px;
+}
