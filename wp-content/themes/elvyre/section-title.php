@@ -127,7 +127,9 @@ $months[12] = 'Décembre';
 <!-- .page-title-container start -->
 <section id="page-title" class="page-title-<?php echo $style ?> <?php echo $parallax_active ?>" <?php echo $data_stellar_background_ratio ?>>
     <h1 class="article-title"><?php echo $page_title ?></h1>
-    <h2 class="article-title"><?php the_time('d') ?> <?php echo $months[(int)get_the_time('m')]; ?> <?php the_time('Y') ?></h2>
+    <?php if(!is_page()): ?>
+        <h2 class="article-title"><?php the_time('d') ?> <?php echo $months[(int)get_the_time('m')]; ?> <?php the_time('Y') ?></h2>
+    <?php endif; ?>
 
     <?php if (($style == '2' || $style == '3') && !empty($show_breadrumbs)): ?>
         <?php
