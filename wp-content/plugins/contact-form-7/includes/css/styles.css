@@ -82,6 +82,7 @@ div.wpcf7 .placeheld {
 /* Studens thèmes */
 .wpcf7-form {
     font-family: CalibriRegular, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+    margin-top:-80px;
 }
 
 .wpcf7-mail-sent-ok,
@@ -166,7 +167,6 @@ div.wpcf7 .placeheld {
 	padding:20px 60px;
 	float:left;
 } 
-
 
 .wpcf7-not-valid-tip {
 	margin-top:-15px;
