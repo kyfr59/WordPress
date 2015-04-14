@@ -91,6 +91,7 @@
         <!-- Studens integration -->
         <link href="<?php echo OMEKA_URL?>themes/studens/shared/shared.css" media="screen" rel="stylesheet" type="text/css" >
         <style>#header-content input {height:32px !important;}</style>
+        <?php $isWordpress = true; ?>
         <?php require(OMEKA_URL."shared/header") ?>
 
         <?php if ($pi_theme_options['website_layout'] == 'boxed'): ?>
