@@ -80,6 +80,14 @@ div.wpcf7 .placeheld {
 
 
 /* Studens thèmes */
+
+section.page-content {
+	background: url(../../../../themes/elvyre/img/body-square-background.png), url(../../../../themes/elvyre/img/body-bottom-background.png);
+	background-position: left 15px, bottom right;
+	background-repeat: no-repeat;
+}
+
+
 .wpcf7-form {
     font-family: CalibriRegular, Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
     margin-top:-80px;
