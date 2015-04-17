@@ -65,6 +65,9 @@
         /*  Important wp_head() hook */
         wp_head();
         ?>
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto:700,300,500,400' rel='stylesheet' type='text/css'>
+        
     </head>
     <?php
     // website layout layout
