@@ -171,12 +171,12 @@ div.wpcf7 .placeheld {
 
 .wpcf7-form .left, 
 .wpcf7-form .right {
-    width:550px;
+    width:440px;
     float:left;
 }
 
 .wpcf7-form .right {
-    width:600px;
+    width:500px;
     margin-left:10px;
 }
 
