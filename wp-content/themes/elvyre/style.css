@@ -4222,7 +4222,7 @@ li.pricing-footer{
     width: 100%;
 }
 
-body.page .page-content .container .row article,
+body.page .page-content .container .row article
 {
     margin-left:120px;
     width:950px !important;
