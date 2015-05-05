@@ -85,7 +85,6 @@ global $wp_query;
 <!-- .page-content start -->
 
 
-
 <section class="page-content <?php if ($hide_page_title == '1') echo 'no-page-title'; ?>">
 
 <h1 id="last-articles">Derniers articles</h1>
