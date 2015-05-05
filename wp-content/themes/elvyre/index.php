@@ -90,7 +90,7 @@ global $wp_query;
 <h1 id="last-articles">Derniers articles</h1>
 
     <!-- .container start -->
-    <div class="container">
+    <div class="container last-articles">
 
         <!-- .row start -->
         <div class="row">
