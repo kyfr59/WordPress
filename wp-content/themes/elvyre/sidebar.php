@@ -6,6 +6,7 @@
 ?>
 <!-- sidebar start -->
 <?php
+/*
 
 global $page_title, $pi_theme_options;
 $aside_classes = array('grid_3');
@@ -65,3 +66,4 @@ if ($animation != "disabled") {
         ?>
     </ul>
 </aside><!-- sidebar end -->
+*/
