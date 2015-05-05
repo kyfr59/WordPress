@@ -360,6 +360,10 @@ a img.aligncenter {
     list-style: decimal inside;
 }
 
+.page-content h3 {
+    margin-top:20px;
+}
+
 /* WORDPRESS SPECIFIC CLASSES: PAGE COMMENTS
 ----------------------------------------------------------------------------- */
 
