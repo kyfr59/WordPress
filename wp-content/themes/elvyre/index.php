@@ -70,6 +70,7 @@ if (is_page()) {
     }
 }
 
+
 // hide page title
 $hide_page_title = get_post_meta($page_id, 'pg_hide_title', true);
 $hide_page_title = empty($hide_page_title) ? '0' : $hide_page_title;
