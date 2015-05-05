@@ -114,7 +114,7 @@ global $wp_query;
 
                 $grid_size = ($blog_style == 'blog-post-full' || $blog_style == 'blog-post-masonry-full') ? 12 : 9;
 
-                $ul_classes = array('grid_12', 'blog-posts', 'content-sidebar-' . $page_sidebar, $blog_style);
+                $ul_classes = array('homepage', 'grid_12', 'blog-posts', 'content-sidebar-' . $page_sidebar, $blog_style);
                 if ($blog_style == 'blog-post-masonry-full') {
                     $ul_classes[] = 'isotope';
                     $ul_classes[] = 'full';

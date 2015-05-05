@@ -4221,18 +4221,18 @@ li.pricing-footer{
 .page-content .row .blog-post-full .post-meta{
     width: 100%;
 }
-/*
-.page-content .container .row article {
+
+.page-content .container .row article.grid_12,
+.page-content .container .row ul.grid_12 article {
     margin-left:120px;
-    width:950px;
+    width:950px !important;
 }
 
-.page-content .container .row article.post-body, 
-.page-content .last-articles article {
+.page-content .container .row ul.homepage article {
     margin-left:0px;
-    width:100%;
+    width:100% !important;
 }
-*/
+
 
 .page-content .container .row article a {
     font-size:15px;
@@ -5277,7 +5277,7 @@ h2.article-title{
 }
 
 .single li.blog-post p {
-    width:1120px !important;
+    width:100% !important;
 }
 
 .single .post-body p a {
