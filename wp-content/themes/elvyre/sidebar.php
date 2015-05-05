@@ -6,7 +6,7 @@
 ?>
 <!-- sidebar start -->
 <?php
-/*
+
 global $page_title, $pi_theme_options;
 $aside_classes = array('grid_3');
 
@@ -35,7 +35,7 @@ if ($animation != "disabled") {
     $aside_classes[] = $animation;
 }
 ?>
-<aside class="<?php echo join(' ', $aside_classes); ?>">
+<aside class="<?php echo join(' ', $aside_classes); ?>" style="float:right; margin-right:70px;">
     <ul class="aside_widgets">
         <?php
         wp_reset_query();
@@ -65,4 +65,3 @@ if ($animation != "disabled") {
         ?>
     </ul>
 </aside><!-- sidebar end -->
-*/

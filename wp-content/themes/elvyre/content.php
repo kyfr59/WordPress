@@ -85,8 +85,8 @@ $single_post_meta = $pi_theme_options['blog_single_meta'];
 
 <li id="post-<?php the_ID(); ?>" <?php post_class($list_classes); ?>>
     
-    
 
+    <?php include("sidebar.php"); ?>
     <?php if (!is_single() && $blog_style != 'blog-post-small-image' || (is_single() && $single_post_meta == '1')): ?>
         <!--
         <ul class="post-info">
