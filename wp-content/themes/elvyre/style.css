@@ -4216,6 +4216,17 @@ li.pricing-footer{
     width: 100%;
 }
 
+.page-content .container .row article {
+    margin-left:120px;
+    width:950px;
+}
+
+.page-content .container .row article a {
+    font-size:15px;
+}
+
+
+
 
 /* ==========================================================================
     POST COMMENTS
