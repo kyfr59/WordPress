@@ -9,7 +9,7 @@
 <html id="ie8" <?php language_attributes(); ?>>
 <![endif]-->
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> style="margin-top:0px !important">
     <?php global $pi_theme_options ?>
     <!--<![endif]-->
     <head>
@@ -95,7 +95,7 @@
         <link href="<?php echo OMEKA_URL?>themes/studens/shared/shared.css" media="screen" rel="stylesheet" type="text/css" >
         <style>#header-content input {height:32px !important;}</style>
         <?php $isWordpress = true; ?>
-        <?php require(OMEKA_URL."shared/header") ?>
+        <?php require(OMEKA_URL."/shared/header") ?>
 
         <?php if ($pi_theme_options['website_layout'] == 'boxed'): ?>
             <!-- .page-wrapper start -->
@@ -165,16 +165,16 @@
             <div class="presentation">
                 <hr />
                 <h1>Donner droit de cité aux mouvements étudiants et à leurs mémoires !</h1>
-                <p>Post hanc adclinis Libano monti Phoenice, regio plena gratiarum et venustatis, urbibus decorata magnis et pulchris; in quibus amoenitate celebritateque nominum Tyros excellit, Sidon et Berytus isdemque pares Emissa et Damascus saeculis condita priscis.</p>
+                <p>Sauvegarder et valoriser les archives et ressources documentaires sur les engagements étudiants est une cause d'intérêt général... <em>Studens</em> en est une nouvelle illustration « par le fait ». </p>
                 <div>
                     <h1>Ressources numériques</h1>
-                    <p>Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus, quarum ad.</p>
-                    <a href="#">EN SAVOIR PLUS</a>
+                    <p>Les ressources numériques accessibles dans <em>studens</em> sont présentées sous forme de corpus documentaires issus de fonds ou collections ou sous forme d'expositions en ligne.</p>
+                    <a href="http://documents.studens.info/">EN SAVOIR PLUS</a>
                 </div>
                 <div class="right">
                     <h1>Inventaires d'archives</h1>
-                    <p>Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas latasque leges fundamenta libertatis et retinacula sempiterna velut</p>
-                    <a href="#">EN SAVOIR PLUS</a>
+                    <p>Les instruments de recherche consultables dans studens suivent la norme ISAD/G et sont publiés en XML/EAD, restituant contexte de production, structuration et hiérarchie des informations.</p>
+                    <a href="http://www.studens.info/les-inventaires/">EN SAVOIR PLUS</a>
                 </div> 
             </div>
 

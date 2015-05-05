@@ -159,17 +159,17 @@ global $wp_query;
 
    
     <div id="jumbotron">
-        <a href="#" class="left">
+        <a href="http://documents.studens.info/exhibits" class="left">
             <p>
                 <strong>Expositions</strong>
-                Ciliciam vero, quae Cydno amni exultat, Tarsus nobilitat, urbs perspicabilis hanc condidisse Perseus memoratur, Iovis filius et Danaes, vel certe ex Aethiopia profectus Sandan quidam nomine vir opulentus et nobilis et Anazarbus auctoris.
+                Expositions virtuelles sur l’histoire et l'actualité des engagements étudiants alimentées par les différents travaux de recherches et les ressources accessibles via <em>studens</em>.
             </p>
         </a> 
-        <a href="#" class="right">
+        <a href="http://documents.studens.info/collections" class="right">
             <p>
                 <strong>Collections</strong>
-                Vbi curarum abiectis ponderibus aliis tamquam nodum et codicem difficillimum Caesarem convellere nisu valido cogitabat, eique deliberanti cum proximis clandestinis conloquiis et nocturnis qua vi, quibusve commentis.
-            </p>
+                Corpus de documents numériques, soit issus de fonds d'archives, soit issus de fonds documentaires ou de collections (périodiques, témoignages, cartes postales, ...) de différentes institutions.
+                </p>
         </a> 
     </div>
 
@@ -179,18 +179,18 @@ global $wp_query;
     <div id="thema">
         <p>
             <strong>kézako</strong>
-            <span>Ciliciam vero, quae Cydno amni exultat, Tarsus nobilitat, urbs perspicabilis hanc condidisse Perseus memoratur, Iovis filius et Danaes, vel certe ex Aethiopia profectus Sandan quidam nomine vir opulentus et nobilis et Anazarbus auctori.</span>
-            <a href="#">EN SAVOIR PLUS</a>
+            <span><em>Studens</em> se veut un nouvel outil d'aide à la recherche, un « portail des mémoires étudiantes ». <em>Studens</em>, signifie "en étudiant" en latin (gérondif).</span>
+            <a href="http://www.studens.info/kezako/">EN SAVOIR PLUS</a>
         </p>
         <p>
             <strong class="middle">collecter et traiter</strong>
-            <span>Vbi curarum abiectis ponderibus aliis tamquam nodum et codicem difficillimum Caesarem convellere nisu valido cogitabat, eique deliberanti cum proximis clandestinis conloquiis et nocturnis qua vi, quibusve commentis id fieret.</span>
-            <a href="#">EN SAVOIR PLUS</a>
+            <span>Les différents partenaires patrimoniaux de ce portail mènent un travail inlassable de collecte et de traitement des archives et ressources documentaires de et sur les engagements étudiants.</span>
+            <a href="http://www.studens.info/collecter-et-traiter/">EN SAVOIR PLUS</a>
         </p>
         <p>
             <strong class="right">valoriser et soutenir</strong>
-            <span>Et olim licet otiosae sint tribus pacataeque centuriae et nulla mollioribus scriptis per simulationem tractatus publici nimis urgentis eundem  suffragiorum certamina set Pompiliani redierit securitas temporis, per omnes tamen quotquot sunt partes.</span>
-            <a href="#">EN SAVOIR PLUS</a>
+            <span>Les différents partenaires patrimoniaux de ce portail mènent aussi un travail de valorisation des archives et ressources documentaires de et sur les engagements étudiants... Que vous pouvez soutenir !</span>
+            <a href="http://www.studens.info/valoriser-et-soutenir/">EN SAVOIR PLUS</a>
         </p>
         <br style="clear:both;"/>
     </div>
