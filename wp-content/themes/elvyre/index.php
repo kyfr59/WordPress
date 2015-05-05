@@ -200,32 +200,6 @@ global $wp_query;
     </div>
 
 </section><!-- .page-content end -->
-<?php if (!$detect->isMobile() && is_home()): ?>
-    <script>
-        /* <![CDATA[ */
-        jQuery(document).ready(function($) {
-            'use strict';
-
-            //ISOTOPE START            
-            (function() {
-                var $container = $('#blogmasonry').imagesLoaded(function() {
-                    // cache container
-                    var $blogmasonry = $('#blogmasonry');
-                    // initialize isotope
-                    $blogmasonry.isotope({
-                        masonry: {
-                            columnWidth: 1,
-                            isResizable: true
-                        }
-                    });
-                });
-
-            })(); // ISOTOPE END
-        });
-
-        /* ]]> */
-    </script>
-    <?php
-endif;
+<?php
 get_footer();
 ?>
