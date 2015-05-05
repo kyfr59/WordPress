@@ -138,10 +138,10 @@ class Simple_Responsive_Slider {
 					
 					//Check if image will cropped
 					if (file_exists($image_crop_full_path)) {
-						$image_cropped = '<img src="'.SIMPLE_RESPONSIVE_SLIDER_URL_DIR_IMAGE.'/srs-'.$basename_image_crop.'" alt="'.get_the_title($id).'" />';
+						$image_cropped = '<img src="'.SIMPLE_RESPONSIVE_SLIDER_URL_DIR_IMAGE.'/srs-'.$basename_image_crop.'" />';
 					} else {								
 						$image_cropped = wp_get_attachment_image_src( $id, 'full' );
-						$image_cropped = '<img src="'.$image_cropped[0].'" alt="'.get_the_title($id).'" />';
+						$image_cropped = '<img src="'.$image_cropped[0].'" />';
 					}
 					if($slider['image_caption-'.$id]){
 						$caption = '<p class="caption"><span>'.$slider['image_caption-'.$id].'</span></p>';
@@ -150,7 +150,7 @@ class Simple_Responsive_Slider {
 						if($slider['image_link_target-'.$id]){
 							$link_target = 'target="_blank"';							
 						}
-						$link_open = '<a href="'.$slider['image_link-'.$id].'" title="'.$slider['image_caption-'.$id].'" '.$link_target.'>';
+						$link_open = '<a href="'.$slider['image_link-'.$id].'" '.$link_target.'>';
 						$link_close = '</a>';
 					}
 					if(!($slider['image_disabled-'.$id] == '1')){
