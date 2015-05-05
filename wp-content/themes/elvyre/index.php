@@ -61,6 +61,7 @@ if (is_404()) {
     $page_title = __('404 - Not Found', 'pi_framework');
 }
 
+
 if (is_page()) {
     $page_id = get_the_ID();
     $page_title = get_post_meta($page_id, 'pg_page_description', true);
