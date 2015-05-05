@@ -4222,15 +4222,15 @@ li.pricing-footer{
     width: 100%;
 }
 
-.page-content .container .row article.grid_12,
-.page-content .container .row ul.grid_12 article {
+body.page .page-content .container .row article,
+{
     margin-left:120px;
     width:950px !important;
 }
 
-.page-content .container .row ul.homepage article {
-    margin-left:0px;
-    width:100% !important;
+body.single-post .page-content .container .row article {
+    margin-left:120px;
+    width:900px !important;
 }
 
 
