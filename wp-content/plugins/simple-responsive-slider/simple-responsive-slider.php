@@ -150,7 +150,7 @@ class Simple_Responsive_Slider {
 						if($slider['image_link_target-'.$id]){
 							$link_target = 'target="_blank"';							
 						}
-						$link_open = '<a href="'.$slider['image_link-'.$id].'" '.$link_target.'>';
+						$link_open = '<a class="slider-title" href="'.$slider['image_link-'.$id].'" '.$link_target.'>';
 						$link_close = '</a>';
 					}
 					if(!($slider['image_disabled-'.$id] == '1')){

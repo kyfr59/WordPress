@@ -508,6 +508,22 @@ p, a{
     line-height: 22px;
 }
 
+
+.rslides_container p, 
+.rslides_container a {
+    color: white;
+    font: 13px 'Roboto', Arial, sans-serif;
+    line-height: 22px;
+}
+
+.rslides_container p:hover, 
+.rslides_container a:hover {
+    color: white !important;
+    font: 13px 'Roboto', Arial, sans-serif;
+    line-height: 22px;
+}
+
+
 a.read-more{
     float: right;
     font-family: 'Roboto', Arial, sans-serif;
